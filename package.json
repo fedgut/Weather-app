@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "webpack": "^4.42.1",
-    "wepack-cli": "0.0.1-security"
+    "webpack-cli": "^3.3.11"
   }
 }
