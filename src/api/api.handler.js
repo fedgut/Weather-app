@@ -6,8 +6,16 @@ async function data(...params) {
     { mode: 'cors' },
   );
   const getData = await response.json();
-  params[1] == 'metric' ? getData.units = '°C' : getData.units = '°F';
+  params[1] === 'metric' ? getData.units = '°C' : getData.units = '°F';
   return getData;
 }
 
-export default data;
+async function callApi() {
+  const input = document.getElementById('city');
+  const units = document.querySelector('input[name="unitRadios"]:checked')
+    .value;
+  const datum = await data(input.value, units);
+  return datum;
+}
+
+export default callApi;

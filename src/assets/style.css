@@ -24,3 +24,26 @@ h5, h6, p, form {
 h5 {
   font-size: 1.5rem;
 }
+
+.btn {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: none;
+  box-shadow: none;
+}
+
+.btn:focus {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: none;
+  box-shadow: none;
+}

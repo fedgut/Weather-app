@@ -1,16 +1,8 @@
-import data from './api/api.handler';
+import callApi from './api/api.handler';
 import renderCard from './views/renderCard';
 import createForm from './views/renderForm';
 import createUnitSelector from './views/renderSelector';
 import frame from './views/frame';
-
-async function callApi() {
-  const input = document.getElementById('city');
-  const units = document.querySelector('input[name="unitRadios"]:checked')
-    .value;
-  const datum = await data(input.value, units);
-  return datum;
-}
 
 function weatherApp() {
   frame();
