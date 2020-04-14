@@ -10,11 +10,11 @@ async function renderCard(data) {
   card.className = 'card';
   cardBody.className = 'card-body';
   h5.className = 'card-title';
-  h5.textContent = data.name;
+  h5.textContent = `${data.name},  ${data.sys.country}`;
   h6.classList = 'card-subtitle mb-2';
-  h6.textContent = `Current temperature ${data.main.temp}`;
-  p1.textContent = `Feels Like ${data.main.feels_like}`;
-  p2.textContent = `Max ${data.main.temp_max}, Min ${data.main.temp_min}`;
+  h6.textContent = `Current temperature: ${data.main.temp} ${data.units}`;
+  p1.textContent = `Feels Like: ${data.main.feels_like} ${data.units}`;
+  p2.textContent = `Max: ${data.main.temp_max} ${data.units}, Min: ${data.main.temp_min} ${data.units}`;
   p1.classList = 'card-text';
   p2.classList = 'card-text';
 
