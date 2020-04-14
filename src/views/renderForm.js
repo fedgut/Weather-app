@@ -1,4 +1,3 @@
-import renderCard from "./renderCard";
 
 function createForm() {
   const base = document.querySelector('body');
@@ -15,7 +14,7 @@ function createForm() {
   input.setAttribute('type', 'text');
   input.className = 'form-control';
   input.id = 'city';
-  input.textContent = 'Metepec';
+  input.defaultValue = 'City';
   button.setAttribute('type', 'button');
   button.textContent = 'Check!';
   button.classList = 'btn btn-primary';

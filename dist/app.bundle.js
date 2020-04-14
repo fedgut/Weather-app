@@ -188,6 +188,18 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/api/api.handler.js":
+/*!********************************!*\
+  !*** ./src/api/api.handler.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nasync function data(...params) {\n  const key = 'ce60013986dfcb3ebf13accf07bbb9f9';\n  const response = await fetch(\n    `http://api.openweathermap.org/data/2.5/weather?q=${params[0]}&units=${params[1]}&appid=${key}`,\n  );\n  const getData = await response.json();\n  return getData;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (data);\n\n\n//# sourceURL=webpack:///./src/api/api.handler.js?");
+
+/***/ }),
+
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -196,7 +208,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _views_api_handler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/api.handler */ \"./src/views/api.handler.js\");\n/* harmony import */ var _views_weather_view__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/weather.view */ \"./src/views/weather.view.js\");\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_style_css__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\nObject(_views_weather_view__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n// data('metepec');\n\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/style.css */ \"./src/assets/style.css\");\n/* harmony import */ var _assets_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_assets_style_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _weather_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./weather.controller */ \"./src/weather.controller.js\");\n\n\n\n\n\nObject(_weather_controller__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -208,18 +220,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var boot
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/assets/style.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/assets/style.css?");
-
-/***/ }),
-
-/***/ "./src/views/api.handler.js":
-/*!**********************************!*\
-  !*** ./src/views/api.handler.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* eslint-disable no-console */\n// eslint-disable-next-line no-unused-vars\n\nasync function data(...params) {\n  const key = 'ce60013986dfcb3ebf13accf07bbb9f9';\n  const response = await fetch(\n    `http://api.openweathermap.org/data/2.5/weather?q=${params[0]}&units=${params[1]}&appid=${key}`,\n  );\n  console.log(params[1]);\n  const getData = await response.json();\n  console.log(getData);\n  return getData;\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (data);\n\n\n//# sourceURL=webpack:///./src/views/api.handler.js?");
 
 /***/ }),
 
@@ -243,19 +243,31 @@ eval("__webpack_require__.r(__webpack_exports__);\nasync function renderCard(dat
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _renderCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./renderCard */ \"./src/views/renderCard.js\");\n\n\nfunction createForm() {\n  const base = document.querySelector('body');\n  const container = document.createElement('div');\n  const form = document.createElement('form');\n  const formGroup = document.createElement('div');\n  const input = document.createElement('input');\n  const button = document.createElement('button');\n  const cardContainer = document.createElement('div');\n\n  container.className = 'container';\n  cardContainer.className = 'container';\n  formGroup.className = 'form-group';\n  input.setAttribute('type', 'text');\n  input.className = 'form-control';\n  input.id = 'city';\n  input.textContent = 'Metepec';\n  button.setAttribute('type', 'button');\n  button.textContent = 'Check!';\n  button.classList = 'btn btn-primary';\n  button.id = 'btn';\n  cardContainer.id = 'container';\n\n  base.appendChild(container);\n  container.appendChild(form);\n  form.appendChild(formGroup);\n  formGroup.appendChild(input);\n  formGroup.appendChild(button);\n  base.appendChild(cardContainer);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createForm);\n\n\n//# sourceURL=webpack:///./src/views/renderForm.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n\nfunction createForm() {\n  const base = document.querySelector('body');\n  const container = document.createElement('div');\n  const form = document.createElement('form');\n  const formGroup = document.createElement('div');\n  const input = document.createElement('input');\n  const button = document.createElement('button');\n  const cardContainer = document.createElement('div');\n\n  container.className = 'container';\n  cardContainer.className = 'container';\n  formGroup.className = 'form-group';\n  input.setAttribute('type', 'text');\n  input.className = 'form-control';\n  input.id = 'city';\n  input.defaultValue = 'City';\n  button.setAttribute('type', 'button');\n  button.textContent = 'Check!';\n  button.classList = 'btn btn-primary';\n  button.id = 'btn';\n  cardContainer.id = 'container';\n\n  base.appendChild(container);\n  container.appendChild(form);\n  form.appendChild(formGroup);\n  formGroup.appendChild(input);\n  formGroup.appendChild(button);\n  base.appendChild(cardContainer);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createForm);\n\n\n//# sourceURL=webpack:///./src/views/renderForm.js?");
 
 /***/ }),
 
-/***/ "./src/views/weather.view.js":
+/***/ "./src/views/renderSelector.js":
+/*!*************************************!*\
+  !*** ./src/views/renderSelector.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction createUnitSelector() {\n  const div1 = document.createElement('div');\n  const input1 = document.createElement('input');\n  const label1 = document.createElement('label');\n  const div2 = document.createElement('div');\n  const input2 = document.createElement('input');\n  const label2 = document.createElement('label');\n  const form = document.querySelector('form');\n  const formGroup = document.createElement('div');\n\n  formGroup.classList = 'form-group';\n  formGroup.id = 'radio-group';\n\n  div1.classList = 'form-check form-check-inline';\n  input1.classList = 'form-check input';\n  input1.id = 'radioC';\n  input1.setAttribute('type', 'radio');\n  input1.setAttribute('value', 'metric');\n  input1.setAttribute('name', 'unitRadios');\n  input1.checked = true;\n  label1.classList = 'form-check-label';\n  label1.setAttribute('for', 'radioC');\n  label1.textContent = 'Celsius';\n\n  div1.appendChild(label1);\n  div1.appendChild(input1);\n\n  div2.classList = 'form-check form-check-inline';\n  input2.classList = 'form-check input';\n  input2.id = 'radioF';\n  input2.setAttribute('type', 'radio');\n  input2.setAttribute('value', 'imperial');\n  input2.setAttribute('name', 'unitRadios');\n  label2.classList = 'form-check-label';\n  label2.setAttribute('for', 'radioF');\n  label2.textContent = 'Farenheit';\n\n  div2.appendChild(label2);\n  div2.appendChild(input2);\n\n  formGroup.appendChild(div1);\n  formGroup.appendChild(div2);\n  form.appendChild(formGroup);\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (createUnitSelector);\n\n\n//# sourceURL=webpack:///./src/views/renderSelector.js?");
+
+/***/ }),
+
+/***/ "./src/weather.controller.js":
 /*!***********************************!*\
-  !*** ./src/views/weather.view.js ***!
+  !*** ./src/weather.controller.js ***!
   \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_handler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.handler */ \"./src/views/api.handler.js\");\n/* harmony import */ var _renderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./renderCard */ \"./src/views/renderCard.js\");\n/* harmony import */ var _renderForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./renderForm */ \"./src/views/renderForm.js\");\n\n\n\n\n\n\nfunction createUnitSelector() {\n  const div1 = document.createElement('div');\n  const input1 = document.createElement('input');\n  const label1 = document.createElement('label');\n  const div2 = document.createElement('div');\n  const input2 = document.createElement('input');\n  const label2 = document.createElement('label');\n  const form = document.querySelector('form');\n  const formGroup = document.createElement('div');\n\n  formGroup.classList = 'form-group';\n  formGroup.id = 'radio-group';\n\n  div1.classList = 'form-check form-check-inline';\n  input1.classList = 'form-check input';\n  input1.id = 'radioC';\n  input1.setAttribute('type', 'radio');\n  input1.setAttribute('value', 'metric');\n  input1.setAttribute('name', 'unitRadios');\n  input1.checked = true;\n  label1.classList = 'form-check-label';\n  label1.setAttribute('for', 'radioC');\n  label1.textContent = 'Celsius';\n\n  div1.appendChild(label1);\n  div1.appendChild(input1);\n\n  div2.classList = 'form-check form-check-inline';\n  input2.classList = 'form-check input';\n  input2.id = 'radioF';\n  input2.setAttribute('type', 'radio');\n  input2.setAttribute('value', 'imperial');\n  input2.setAttribute('name', 'unitRadios');\n  label2.classList = 'form-check-label';\n  label2.setAttribute('for', 'radioF');\n  label2.textContent = 'Farenheit';\n\n  div2.appendChild(label2);\n  div2.appendChild(input2);\n\n  formGroup.appendChild(div1);\n  formGroup.appendChild(div2);\n  form.appendChild(formGroup);\n}\n\nfunction weatherApp() {\n  Object(_renderForm__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  createUnitSelector();\n  const button = document.getElementById('btn');\n  const input = document.getElementById('city');\n  const form = document.querySelector('form');\n\n  button.onclick = async () => {\n    const units = document.querySelector('input[name=\"unitRadios\"]:checked')\n      .value;\n    const datum = await Object(_api_handler__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(input.value, units);\n    Object(_renderCard__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(datum);\n  };\n\n  form.onclick = async () => {\n    const units = document.querySelector('input[name=\"unitRadios\"]:checked')\n      .value;\n    const datum = await Object(_api_handler__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(input.value, units);\n    Object(_renderCard__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(datum);\n  };\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (weatherApp);\n\n\n//# sourceURL=webpack:///./src/views/weather.view.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_api_handler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api/api.handler */ \"./src/api/api.handler.js\");\n/* harmony import */ var _views_renderCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/renderCard */ \"./src/views/renderCard.js\");\n/* harmony import */ var _views_renderForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/renderForm */ \"./src/views/renderForm.js\");\n/* harmony import */ var _views_renderSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/renderSelector */ \"./src/views/renderSelector.js\");\n\n\n\n\n\nfunction weatherApp() {\n  Object(_views_renderForm__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_views_renderSelector__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  const button = document.getElementById('btn');\n  const input = document.getElementById('city');\n  const form = document.querySelector('form');\n\n  button.onclick = async () => {\n    const units = document.querySelector('input[name=\"unitRadios\"]:checked')\n      .value;\n    const datum = await Object(_api_api_handler__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(input.value, units);\n    Object(_views_renderCard__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(datum);\n  };\n\n  form.onclick = async () => {\n    const units = document.querySelector('input[name=\"unitRadios\"]:checked')\n      .value;\n    const datum = await Object(_api_api_handler__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(input.value, units);\n    Object(_views_renderCard__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(datum);\n  };\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (weatherApp);\n\n\n//# sourceURL=webpack:///./src/weather.controller.js?");
 
 /***/ })
 

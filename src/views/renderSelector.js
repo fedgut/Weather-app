@@ -1,9 +1,3 @@
-import data from './api.handler';
-import renderCard from './renderCard';
-import createForm from './renderForm';
-
-
-
 function createUnitSelector() {
   const div1 = document.createElement('div');
   const input1 = document.createElement('input');
@@ -49,26 +43,4 @@ function createUnitSelector() {
   form.appendChild(formGroup);
 }
 
-function weatherApp() {
-  createForm();
-  createUnitSelector();
-  const button = document.getElementById('btn');
-  const input = document.getElementById('city');
-  const form = document.querySelector('form');
-
-  button.onclick = async () => {
-    const units = document.querySelector('input[name="unitRadios"]:checked')
-      .value;
-    const datum = await data(input.value, units);
-    renderCard(datum);
-  };
-
-  form.onclick = async () => {
-    const units = document.querySelector('input[name="unitRadios"]:checked')
-      .value;
-    const datum = await data(input.value, units);
-    renderCard(datum);
-  };
-}
-
-export default weatherApp;
+export default createUnitSelector;

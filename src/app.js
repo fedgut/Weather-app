@@ -1,8 +1,6 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import data from './views/api.handler';
-import weatherApp from './views/weather.view';
 import './assets/style.css';
+import weatherApp from './weather.controller';
 
 weatherApp();
-// data('metepec');
