@@ -1,0 +1,9 @@
+.container {
+  margin-top: 5rem;
+  max-width: 40rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
