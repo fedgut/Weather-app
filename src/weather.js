@@ -4,6 +4,14 @@ import createForm from './views/renderForm';
 import createUnitSelector from './views/renderSelector';
 import frame from './views/frame';
 
+async function showWeather() {
+  try {
+    renderCard(await callApi());
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function weatherApp() {
   frame();
   createForm();
@@ -11,17 +19,13 @@ function weatherApp() {
   const button = document.getElementById('btn');
   const form = document.querySelector('form');
 
-  button.onclick = async () => {
-    renderCard(await callApi());
-  };
+  button.onclick = showWeather();
 
-  form.onclick = async () => {
-    renderCard(await callApi());
-  };
+  form.onclick = showWeather();
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    callApi().then((response) => renderCard(response));
+    showWeather();
   });
 }
 

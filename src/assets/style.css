@@ -1,6 +1,11 @@
+.body {
+  background-color: ;
+}
+
 .container {
   margin-top: 2.5rem;
   max-width: 25rem;
+  background-color: white;
 }
 
 .form-group {
