@@ -1,8 +1,4 @@
 async function renderCard(data) {
-  if (data.error) {
-    console.log(data);
-    return
-  }
   const card = document.createElement('div');
   const cardBody = document.createElement('div');
   const h5 = document.createElement('h5');
@@ -10,6 +6,20 @@ async function renderCard(data) {
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
   const parent = document.getElementById('container');
+
+  if (data.error) {
+    card.className = 'card';
+    cardBody.className = 'card-body';
+    h5.className = 'card-title';
+    h5.textContent = `${data.error}`;
+    card.appendChild(cardBody);
+    cardBody.appendChild(h5);
+    if (parent.lastChild) {
+      parent.removeChild(parent.lastChild);
+    }
+    parent.appendChild(card);
+    return;
+  }
 
   card.className = 'card';
   cardBody.className = 'card-body';
