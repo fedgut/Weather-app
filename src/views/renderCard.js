@@ -1,4 +1,8 @@
 async function renderCard(data) {
+  if (data.error) {
+    console.log(data);
+    return
+  }
   const card = document.createElement('div');
   const cardBody = document.createElement('div');
   const h5 = document.createElement('h5');
