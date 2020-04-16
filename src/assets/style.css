@@ -52,3 +52,7 @@ h5 {
   border: none;
   box-shadow: none;
 }
+
+#img-container {
+  text-transform: capitalize;
+}

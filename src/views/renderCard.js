@@ -6,6 +6,8 @@ async function renderCard(data) {
   const p1 = document.createElement('p');
   const p2 = document.createElement('p');
   const parent = document.getElementById('container');
+  const imgCont = document.createElement('div');
+  const img = new Image();
 
   if (data.error) {
     card.className = 'card';
@@ -31,12 +33,17 @@ async function renderCard(data) {
   p2.textContent = `Max: ${data.main.temp_max} ${data.units}, Min: ${data.main.temp_min} ${data.units}`;
   p1.classList = 'card-text';
   p2.classList = 'card-text';
+  imgCont.id = 'img-container';
+  imgCont.textContent = data.weather[0].description;
+  img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
   card.appendChild(cardBody);
   cardBody.appendChild(h5);
   cardBody.appendChild(h6);
   cardBody.appendChild(p1);
   cardBody.appendChild(p2);
+  cardBody.appendChild(imgCont);
+  imgCont.appendChild(img);
 
   if (parent.lastChild) {
     parent.removeChild(parent.lastChild);
