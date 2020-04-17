@@ -1,0 +1,38 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "A weather app using the Open weather API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedgut/weather_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedgut/weather_app/issues"
+  },
+  "homepage": "https://github.com/fedgut/weather_app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.4.1",
+    "css-loader": "^3.5.2",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1",
+    "style-loader": "^1.1.3"
+  }
+}

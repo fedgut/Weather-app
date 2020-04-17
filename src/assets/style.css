@@ -1,0 +1,58 @@
+.body {
+  background-color: ;
+}
+
+.container {
+  margin-top: 2.5rem;
+  max-width: 25rem;
+  background-color: white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  font-family: 'Inria Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+}
+
+h5, h6, p, form {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: none;
+  box-shadow: none;
+}
+
+.btn:focus {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  border: none;
+  box-shadow: none;
+}
+
+#img-container {
+  text-transform: capitalize;
+}
