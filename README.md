@@ -1,7 +1,7 @@
 
 # Javascript 05 Project: Weather App!
 
-This project builds a browser based ToDo list. You can check the complete description [here - project 5](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+This project builds a Weather APP with vanilla JS. You can check the complete description [here - project 5](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 ## Built With:
 
