@@ -1,7 +1,7 @@
 
 # Javascript 05 Project: Weather App!
 
-This project builds a Weather APP with vanilla JS. You can check the complete description [here - project 5](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+A Weather APP with JS. You can check the complete description [here - project 5](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 ## Built With:
 
@@ -12,6 +12,12 @@ This project builds a Weather APP with vanilla JS. You can check the complete de
 - Webpack
 - OpenWeatherMap API
 
+## Concept:
+
+A minimal but fully functional UI
+
+Customizable to advertise your brand/product, offer coupons and discounts or include as a widdget in your site!
+
 ## Author
 
 - Eduardo Gutierrez 
@@ -19,7 +25,9 @@ This project builds a Weather APP with vanilla JS. You can check the complete de
 
 ## Getting started
 
-To get started with the app, clone the repo, install NPM, run NPM install and you are set to go.
+To get started with the app, visit the Live version, and type a city name or a Zip Code (5 numbers format) to see current weather at the location.
+
+Easily switch between Fahrenheit and Celsius
 
 ## Live Version
   - [Live version in Git Hack](https://raw.githack.com/fedgut/weather_app/weather_app/dist/index.html)
@@ -28,4 +36,3 @@ To get started with the app, clone the repo, install NPM, run NPM install and yo
 
 - [Microverse](https://www.microverse.org/)
 - [The Odin Project](https://www.theodinproject.com)
-
